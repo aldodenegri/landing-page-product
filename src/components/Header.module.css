@@ -79,4 +79,8 @@ header{
   .horizontal_navbar .nav_menu li:last-child {
     display: none;
   }
+
+  .vertical_navbar{
+    display:none !important;
+  }
 }
