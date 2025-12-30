@@ -1,0 +1,82 @@
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+.horizontal_navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: inline-block;
+    height: 50px;
+}
+
+.horizontal_navbar .nav_menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+.nav_menu li{
+    height:50px;
+    display:flex;
+    align-items: center;
+}
+.nav_menu li a {
+    color: rgb(170, 169, 169);
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.nav_menu li a:hover {
+    color: #007bff;
+    background-color: aliceblue;
+    border-bottom:2px solid #007bff;
+}
+
+.vertical_navbar{
+    position: fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:200px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.vertical_navbar li{
+    width:100%;
+}
+/* Stai attento quando usi queste proprietà, devi mettere i due punti all'interno delle tonde, altrimenti
+   non ti prende il comando per via di come CSS Modules fa lo scope(maschera degli elementi.
+   Il codice nel particolare prende tutti gli elementi tranne escludendo l'ultimo applicando la regola 
+   all'interno.*/
+.horizontal_navbar .nav_menu li:not(:last-child) {
+    display: none;
+  }
+@media(min-width:900px)
+{
+    .horizontal_navbar .nav_menu li:not(:last-child) {
+    display: flex;
+  }
+
+  .horizontal_navbar .nav_menu li:last-child {
+    display: none;
+  }
+}
