@@ -7,7 +7,7 @@ function NavMenuLinksFunction({ links }) {
         <>
             {links.map((elem) => (
                 <li key={elem.id}>
-                    <a href="#">{elem.label}</a>
+                    <a href={elem.id}>{elem.label}</a>
                 </li>
             ))}
         </>
