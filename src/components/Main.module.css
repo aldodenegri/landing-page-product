@@ -31,6 +31,81 @@
     background-color: rgb(44, 44, 44);
     color:white;
 }
+.pros{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+}
+.pros div{
+    width:200px;
+}
+.pros img{
+    height: 100px;
+
+}
+.wrapper
+{
+    border: solid black 1px;
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.wrapper h2{
+    font-size: 30px;
+}
+/*Prima di usare questo apporocio ho utilizzato 
+
+.wrapper div > div {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+che funzionava ma quando è stato introdotto Swiper questo creava conflitto per le regole su cui opera
+il che significa che bisognava applicare display flex, a tutti gli elementi all'interno invece che al padre di questi
+*/
+
+.slide1,
+.slide2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Singola recensione */
+.reviewContainer {
+    max-width: 250px;
+    background: white;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Serve solo ad allontanare di più le stelle fra di loro */
+.reviewContainer > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 20px 0;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #333;
+}
 @media(min-width:768px)
 {
     .banner{
