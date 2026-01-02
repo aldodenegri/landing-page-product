@@ -1,6 +1,11 @@
 header{
-    display:flex;
+    position:sticky;
+    top:0;
+    background-color: white;
     margin:0 auto;
+    width:90%;
+    z-index:100;/*è un numero alto a caso, ci sono degli elementi di librerie esterne che modificano il z-index ed esce fuori il mio controllo*/
+    display:flex;
     max-width:1400px;
     align-items: center;
     justify-content: space-between;

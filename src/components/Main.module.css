@@ -1,60 +1,69 @@
 .banner {
     height: 300px;
-    margin:0 auto;
+    margin: 0 auto;
     max-width: 1400px;
     background-image: url('../assets/imgs/banner-bg.png');
     background-size: cover;
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
 
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    
-}
-.banner img{
-    height: 100%;
-    width:50%;
+
 }
 
-.bannerTxt button{
-    margin:10px auto;
+.banner img {
+    height: 100%;
+    width: 50%;
+}
+
+.bannerTxt button {
+    margin: 10px auto;
     background-color: rgba(255, 255, 255, 0);
-    border: solid rgb(44,44,44) 1px;
+    border: solid rgb(44, 44, 44) 1px;
     border-radius: 0;
     text-transform: uppercase;
 }
 
-.bannerTxt button:hover{
+.bannerTxt button:hover {
 
     background-color: rgb(44, 44, 44);
-    color:white;
+    color: white;
 }
-.pros{
-    display:flex;
+
+.pros {
+    width:80%;
+    margin:0 auto;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
 
 }
-.pros div{
-    width:200px;
+
+.pros div {
+    width: 200px;
 }
-.pros img{
-    height: 100px;
+
+.pros img {
+    height: 150px;
 
 }
-.wrapper
-{
+
+
+.wrapper {
     border: solid black 1px;
-    width:80%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
 }
-.wrapper h2{
+
+.wrapper h2 {
     font-size: 30px;
 }
+
 /*Prima di usare questo apporocio ho utilizzato 
 
 .wrapper div > div {
@@ -88,11 +97,11 @@ il che significa che bisognava applicare display flex, a tutti gli elementi all'
     border-radius: 8px;
     padding: 30px 20px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Serve solo ad allontanare di più le stelle fra di loro */
-.reviewContainer > div:nth-child(2) {
+.reviewContainer .fiveStars {
     display: flex;
     justify-content: center;
     gap: 6px;
@@ -100,30 +109,123 @@ il che significa che bisognava applicare display flex, a tutti gli elementi all'
 }
 
 .swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 1;
+    background: #ccc;
+    opacity: 1;
 }
+
 .swiper-pagination-bullet-active {
-  background: #333;
+    background: #333;
 }
-@media(min-width:768px)
-{
-    .banner{
-        height:450px;
+
+.products {
+    width: 100%;
+    border: solid black 1px;
+    margin: 50px auto;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.products h2 {
+    font-size: 30px;
+}
+
+.products span {
+    font-size: 18px;
+}
+
+.duckCard {
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.duckCard img {
+    height: 200px;
+}
+
+.duckCard .fiveStars {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 6px;
+}
+
+.duckCard>span:last-child {
+    font-weight: 600;
+    color: rgb(10, 205, 140);
+}
+
+.mySwiper {
+    width: 100%;
+}
+
+.faqs {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+}
+
+.faqs img {
+    height: 500px;
+}
+
+.faqs>div {
+    font-size: 12px;
+    width: 40%;
+    margin: 0 20px;
+}
+
+.faqItem {
+    
+    border-radius: 8px;
+    padding: 20px;
+    background: white;
+    
+}
+
+.faqQuestion {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.faqButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    height:50px;
+}
+
+@media(min-width:768px) {
+    .banner {
+        height: 450px;
     }
-    .bannerTxt{
+
+    .bannerTxt {
         font-size: 1rem;
     }
 }
-@media(min-width:992px)
-{
-    .banner{
-        height:600px;
+
+@media(min-width:992px) {
+    .banner {
+        height: 600px;
     }
 }
-@media(min-width:1400px)
-{
-    .banner{
-        height:750px;
+
+@media(min-width:1400px) {
+    .banner {
+        height: 750px;
     }
 }
